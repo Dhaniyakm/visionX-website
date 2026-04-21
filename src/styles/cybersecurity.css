@@ -1,0 +1,72 @@
+.cyber {
+  padding: 80px 20px;
+  background: #1a000c;
+}
+
+.cyber h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* container */
+.cyber-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* card */
+.cyber-card {
+  background: #535050;
+  width: 320px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(236, 233, 233, 0.06);
+  transition: 0.3s;
+}
+
+.cyber-card:hover {
+  transform: translateY(-5px);
+}
+
+/* top line */
+.line {
+  width: 50px;
+  height: 4px;
+  background: rgb(27, 25, 25);
+  margin-bottom: 20px;
+}
+
+/* heading */
+.cyber-card h3 {
+  margin-bottom: 10px;
+}
+
+/* tools */
+.tools {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* description */
+.cyber-card p {
+  font-size: 14px;
+  color: #f7f0f0;
+}
+
+/* button */
+.cyber-card button {
+  margin-top: 20px;
+  padding: 8px 18px;
+  border: 1px solid #007bff;
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.cyber-card button:hover {
+  background: #007bff;
+  color: white;
+}
