@@ -5,7 +5,7 @@ import '../styles/cybersecurity.css';
 function CybersecurityPage() {
 
   const sendWhatsApp = (service) => {
-    const phoneNumber = "919876543210"; // 👉 CHANGE THIS
+    const phoneNumber = "918301964951"; // 👉 CHANGE THIS
 
     const text = `Hello, I am interested in ${service} service. Please give more details.`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
