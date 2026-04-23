@@ -1,29 +1,118 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
-  background: rgba(153, 127, 128, 0.6);
-  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 18px 30px;
+  background: rgba(10, 10, 25, 0.8);
+  backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
-.navbar h2 {
+.logo {
   color: #00f7ff;
+  font-size: 28px;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
-.navbar ul {
+/* Desktop Menu */
+.nav-links {
   display: flex;
   gap: 25px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar a {
-  text-decoration: none;
+.nav-links a {
   color: white;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
   transition: 0.3s;
 }
 
-.navbar a:hover {
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #00f7ff;
+  transition: 0.4s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
   color: #00f7ff;
+}
+
+/* Burger Icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+/* Burger Animation */
+.menu-icon.open span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 6px);
+}
+
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    width: 240px;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    border-radius: 16px;
+    gap: 18px;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
 }
